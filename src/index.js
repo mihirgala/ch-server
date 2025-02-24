@@ -15,6 +15,9 @@ app.use(cors({
 const PORT = process.env.PORT;
 
 connectDB();
+app.get("/", (req, res) => {
+  res.send("Welcome to chatraStay");
+});
 app.get("/api", (req, res) => {
   res.status(200).json({
     message: "Welcom to chahtraStay",
